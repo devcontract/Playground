@@ -37,6 +37,8 @@
             curl_close($ch);
 
             $parsed = $result->result;
+            $parsed = hexdec($parsed);
+
 ?>
 <div class="">
   Your balance in Hex <br>
