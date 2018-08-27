@@ -40,7 +40,7 @@
 ?>
 <div class="">
   Your balance in Hex <br>
-    <input style="" class="" value="<?php echo $parsed ?>"><br>
+    <input id="balance" class="" value="<?php echo $parsed ?>"><br>
   Your balance in Dec (Wei) <br>
   <input style="" class="" value=""><br>
   Your balance in Ether <br>
@@ -48,6 +48,8 @@
 </div>
 
 
-</ipnut>
+<script type="text/javascript">
+
+</script>
   </body>
 </html>
