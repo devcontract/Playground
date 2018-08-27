@@ -4,3 +4,6 @@ geth --identity "MyNodeNAme"  --rpc --rpcport "8545" --rpccorsdomain "*" --datad
 
 
 geth attach /Volumes/External/Ethereum_project/Blockchain_Networks/Private/geth.ipc
+
+
+/Applications/Ethereum\ Wallet.app/Contents/MacOS/Ethereum\ Wallet --rpc /Volumes/External/Ethereum_project/Blockchain_Networks/Private/geth.ipc
