@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <title></title>
   </head>
+  <style media="screen">
+    div{
+      display: inline;
+    }
+  </style>
   <body>
-
-
-<span>test</span>
-    <span><?php $output ?></span>
-
-    <?php
+  <?php
         $url = "http://localhost:8545";
 
             $data = array(
@@ -22,7 +22,7 @@
 
             $json_encoded_data = json_encode($data);
 
-            var_dump($json_encoded_data);
+          //  var_dump($json_encoded_data);   // displays $data on the page
 
             $ch = curl_init($url);
             curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
@@ -37,10 +37,17 @@
             curl_close($ch);
 
             $parsed = $result->result;
+?>
+<div class="">
+  Your balance in Hex <br>
+    <input style="" class="" value="<?php echo $parsed ?>"><br>
+  Your balance in Dec (Wei) <br>
+  <input style="" class="" value=""><br>
+  Your balance in Ether <br>
+  <input style="" class="" value=""><br>
+</div>
 
-            echo $parsed;
 
-    ?>
-
+</ipnut>
   </body>
 </html>
