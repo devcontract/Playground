@@ -1,8 +1,14 @@
 <html>
 <body>
 
-Welcome <?php echo $_GET["fname"]; ?><br>
-Your last name is: <?php echo $_GET["lname"]; ?>
+<div class="">
+  <span>Here we will echo to label GET Method </span>
+<label for=""><?php echo $_GET["fname"]; ?></label>
+</div>
 
+<div class="">
+  <span>Here we will echo to label POST Method </span>
+<label for=""><?php echo $_POST["fname"]; ?></label>
+</div>
 </body>
 </html>
