@@ -2,13 +2,13 @@
 <html>
 <body>
 
-<form action="/get.php" method="get" target="_blank">
+<form action="/get.php" method="get">
   First name: <input type="text" name="fname"><br></br>
   Last name: <input type="text" name="lname"><br></br>
   <input type="submit" value="Submit get">
 </form>
 <br></br>
-<form action="/post.php" method="post" target="_blank">
+<form action="/post.php" method="post">
   First name: <input type="text" name="fname"><br></br>
   Last name: <input type="text" name="lname"><br></br>
 
