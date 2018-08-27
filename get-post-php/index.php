@@ -2,17 +2,18 @@
 <html>
 <body>
 
-<form action="/get.php" method="get" target="_blank">
+<form action="/index.php" method="get" target="_blank">
   First name: <input type="text" name="fname"><br></br>
   Last name: <input type="text" name="lname"><br></br>
   <input type="submit" value="Submit get">
 </form>
 <br></br>
-<form action="/post.php" method="post" target="_blank">
+<form action="/index.php" method="post" target="_blank">
   First name: <input type="text" name="fname"><br></br>
   Last name: <input type="text" name="lname"><br></br>
 
-  сюда: <input type="text" name="input"><br></br>
+Имя  сюда: post <input type="text" name="input" value="<?php echo $_POST["fname"]; ?>"><br></br>
+Фамилия  сюда: post <input type="text" name="input" value="<?php echo $_POST["lname"]; ?>"><br></br>
   <input type="submit" value="Submit post">
 </form>
 <br><br>
