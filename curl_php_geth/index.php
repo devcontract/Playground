@@ -16,7 +16,7 @@
             $data = array(
                     "jsonrpc" => "2.0",
                     "method" => "eth_getBalance",
-                    "params" => array("0xD35B91cf2cf8335c202a88d0e090b91823fcA7DD" , "latest" ),
+                    "params" => array("0x4E81103607839B3895AEEeb2EA5899a8De1C1F5d" , "latest" ),
                     "id" => "1"
             );
 
@@ -37,12 +37,20 @@
             curl_close($ch);
 
             $parsed = $result->result;
-            $parsed = hexdec($parsed);
+            $balanceInWei = hexdec($parsed);
+            $balanceInWei = $balanceInWei / 1000000000000000000;
+          //  $balanceInEth = weiToEth($balanceInWei );
 
+
+
+      function weiToEth($wei)
+      {
+      return bcdiv($wei,1000000000000000000,18);
+      }
 ?>
 <div class="">
   Your balance in Hex <br>
-    <input id="balance" class="" value="<?php echo $parsed ?>"><br>
+    <input id="balance" class="" value="<?php echo $balanceInWei ?>"><br>
   Your balance in Dec (Wei) <br>
   <input style="" class="" value=""><br>
   Your balance in Ether <br>
