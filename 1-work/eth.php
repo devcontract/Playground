@@ -51,10 +51,10 @@ class EthFun
     {
         exec('vanityeth', $outputAndErrors, $return_value);
         $answer = implode(NULL,$outputAndErrors);
-      //  $answer = str_replace('address:','"address":',$answer);
-      //  $answer = str_replace('privKey:','"privKey":',$answer);
-      //  $answer = str_replace('\'','"',$answer);
-        return $answer; //json_decode($answer,true);
+        $answer = str_replace('address:','"address":',$answer);
+        $answer = str_replace('privKey:','"privKey":',$answer);
+        $answer = str_replace('\'','"',$answer);
+        return json_decode($answer,true);
     }
     /*
     * The following functions are for conversion
