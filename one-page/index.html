@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<body>
+
+
+    <p><input name="btcButton" id="showBtcArr" type="button" value="BTC" />
+       <input name="ethButton" id="showEthArr" type="button" value="ETH" />
+    </p>
+    <p><input name="addressField" id="addressField" size="65" type="text" value="" />
+    </p>
+
+
+  <script type="text/javascript">
+
+    $('#showEthArr').click(function() {sendAjax("ETH");});
+    $('#showBtcArr').click(function() {sendAjax("BTC");});
+
+    function sendAjax(res) {
+      console.log(res);
+      $.ajax({
+        type: "POST",
+        url: "index.php",
+        data: {
+          name: res
+        }
+      }).done(function(msg) {
+        $("#addressField").text();
+      });
+    }
+  </script>
+
+</body>
+
+</html>

@@ -10,6 +10,7 @@
 <br></br>
 <form action="/post.php" method="post">
   First name: <input type="text" name="fname"><br></br>
+  <?php echo $addressField; ?>
   Last name: <input type="text" name="lname"><br></br>
 
 
