@@ -28,6 +28,13 @@ class EthFun
         return array('balance'=>$eth,'pending'=>$pending);
     }
 
+    function countAccounts()
+    {
+        $accounts = $this->eth->eth_accounts();
+        $encoded_accounts = serialize($accounts); //json_encode($accounts);
+        return count($accounts);
+    }
+
     function getBalanceInWei($addr)
     {
         $eth_hex = $this->eth->eth_getBalance($addr, 'latest');
