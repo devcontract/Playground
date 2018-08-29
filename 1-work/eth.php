@@ -35,6 +35,29 @@ class EthFun
         return count($accounts);
     }
 
+    function sumEth(){
+       $count = $this->countAccounts();
+       $array = $this->allBalances();
+         foreach ($array as $balance){
+            $total = $total + $balance;
+
+         }
+       return $total;
+    }
+
+    function allBalances(){
+       $count = $this->countAccounts();
+       $allaccounts = $this->eth->eth_accounts();
+       $array;
+         for ($i = 1; $i < $count-1; $i++) {                  //!!!!!!!!!!$i = 0
+           $address = $allaccounts[$i];
+           $balance = $this->getBalanceOfAddress($address);
+           $array[$i] = $balance["balance"];
+         }
+         return $array;
+       }
+
+
     function getBalanceInWei($addr)
     {
         $eth_hex = $this->eth->eth_getBalance($addr, 'latest');
