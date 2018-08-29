@@ -8,5 +8,5 @@
 
 
       $rr =  $ethFun -> genPair();
-      echo $rr;
+      echo $rr, PHP_EOL;
 ?>
