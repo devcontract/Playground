@@ -1,0 +1,3 @@
+geth init /Volumes/External/Ethereum_project/Blockchain_Networks/Private/scripts/genesis.json  --datadir /Volumes/External/Ethereum_project/Blockchain_Networks/Private/
+
+
