@@ -1,0 +1,1 @@
+geth removedb --datadir /Volumes/External/Ethereum_project/Blockchain_Networks/Private
